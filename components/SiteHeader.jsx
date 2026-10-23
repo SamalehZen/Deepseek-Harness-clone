@@ -45,12 +45,8 @@ export default function SiteHeader() {
         <div className="hidden md:flex shrink-0 items-center gap-ds-2 lg:gap-ds-4">
           <div className="ml-ds-1 shrink-0 whitespace-nowrap">
             <div className="ds-locale-toggle">
-              <button type="button" className="ds-locale-toggle-item ">
-                {"中文"}
-              </button>
-              <button type="button" className="ds-locale-toggle-item is-active">
-                {"EN"}
-              </button>
+              <a className="ds-locale-toggle-item" href="/zh" hrefLang="zh-CN">{"中文"}</a>
+              <a className="ds-locale-toggle-item is-active" href="/" aria-current="page">{"EN"}</a>
             </div>
           </div>
         </div>

@@ -84,3 +84,11 @@
 .HarnessCapabilitiesSection_media__3QRiO:has(> .HarnessWorkflowPreview_frame__nh0ZS) > * {
   visibility: hidden;
 }
+
+/* Locale switcher is a pair of buttons upstream; the clone uses links. */
+.ds-locale-toggle a.ds-locale-toggle-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}

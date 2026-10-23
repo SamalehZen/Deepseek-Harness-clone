@@ -7,6 +7,7 @@ import Ecosystem from "@/components/Ecosystem";
 import SiteFooter from "@/components/SiteFooter";
 import Reveal from "@/components/Reveal";
 import Interactions from "@/components/Interactions";
+import StickyHeader from "@/components/StickyHeader";
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
       <MobileMenu />
       <Reveal />
       <Interactions />
+      <StickyHeader />
       <main className="relative flex flex-col w-full">
         <Hero />
         <Capabilities />

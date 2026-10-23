@@ -12,7 +12,7 @@ const require = createRequire(import.meta.url);
 const { parse } = require("node-html-parser");
 
 const source = process.argv[2] || "/tmp/dsh-page/page.html";
-const outDir = path.resolve("components");
+const outDir = path.resolve(process.env.OUT_DIR || "components");
 
 const VOID = new Set([
   "area", "base", "br", "col", "embed", "hr", "img", "input",
