@@ -4,7 +4,18 @@
 export default function Hero() {
   return (
     <section className="relative flex items-center w-full">
-      <div className="absolute inset-0 z-0 overflow-hidden hero-aurora" />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          className="h-full w-full object-cover"
+          src="/harness/videos/hero-loop.webm"
+          poster="/harness/images/hero-canvas.webp"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+      </div>
       <div className="relative z-10 ds-container flex flex-col items-center gap-ds-7 md:gap-ds-8 pt-ds-11 pb-ds-9">
         <div className="flex w-full max-w-[800px] flex-col items-center gap-ds-6 pt-ds-4 text-center">
           <div className="ds-hero-enter flex flex-col items-center gap-ds-4" style={{ "--enter-y": "24px", "--enter-blur": "10px", "animationDuration": "0.9s" }}>

@@ -57,15 +57,16 @@ npm run build
 | Area | Status |
 | --- | --- |
 | Cookie banner | Not cloned on purpose |
-| Hero backdrop | Captured still of the original WebGL canvas (animated aurora is frozen) |
+| Hero backdrop | Captured **video loop** of the original WebGL canvas (8 s, 1 080 px, 159 KB) |
 | Products glow | Captured still of the original canvas layer (particle animation is frozen) |
 | Scroll-morphing header pill | Not implemented (appears on scroll on the live site) |
-| "Adapt to your workflow" card | Shows the message + "Worked" state; the completion card is deeper in the keyframe story |
+| "Adapt to your workflow" card | Rendered as the captured final frame of the original keyframe story |
 | Preview conversation | Present, static; the live page types it out |
 | Language switcher, theme toggle | Buttons present, behaviour not wired (the live site is dark-only and client-routed) |
 
-Measured pixel difference against a live capture at 1440 px (cookie banner excluded):
-**5.7 %**, almost entirely the animated canvas layers and the card story above.
+Pixel difference against a live capture at 1440 px is no longer a meaningful score for
+the hero: both sides animate independently, so the number moves between 5 % and 10 %
+with the aurora phase. Static areas match.
 
 ## Interactions
 

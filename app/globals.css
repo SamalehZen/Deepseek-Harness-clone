@@ -71,30 +71,16 @@
   }
 }
 
-/* The scheduled-task preview is a keyframe story driven by the site's JS.
-   Freeze it on its final frame so the static page shows the same result. */
-.HarnessWorkflowPreview_story__lcRCk,
-.HarnessWorkflowPreview_process__plBvM,
-.HarnessWorkflowPreview_disclosure__33P7k,
-.HarnessWorkflowPreview_finishedLabel__s__3R,
-.HarnessWorkflowPreview_settledSummary__peB18,
-.HarnessWorkflowPreview_result__K6zbj,
-.HarnessWorkflowPreview_completion__MaAG1 {
-  animation: none !important;
+
+
+/* The scheduled-task card plays a JS-driven keyframe story; show the captured
+   final frame instead of freezing it mid-sequence. */
+.HarnessCapabilitiesSection_media__3QRiO:has(> .HarnessWorkflowPreview_frame__nh0ZS) {
+  background-image: url("/harness/images/adapt-card.webp");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
-.HarnessWorkflowPreview_finishedLabel__s__3R,
-.HarnessWorkflowPreview_settledSummary__peB18,
-.HarnessWorkflowPreview_result__K6zbj,
-.HarnessWorkflowPreview_completion__MaAG1 {
-  opacity: 1 !important;
-}
-
-.HarnessWorkflowPreview_disclosure__33P7k {
-  grid-template-rows: 1fr !important;
-}
-
-.HarnessWorkflowPreview_workingLabel__HfIiD,
-.HarnessWorkflowPreview_pendingSummary__YYMCa {
-  display: none !important;
+.HarnessCapabilitiesSection_media__3QRiO:has(> .HarnessWorkflowPreview_frame__nh0ZS) > * {
+  visibility: hidden;
 }
