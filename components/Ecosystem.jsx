@@ -7,13 +7,12 @@ export default function Ecosystem() {
       <div className="absolute -inset-[30%] z-0 pointer-events-none hidden md:block" style={{ "mixBlendMode": "screen", "transform": "translateY(-8%)", "mask": "radial-gradient(ellipse 60% 60% at center, black 0%, transparent 70%)", "WebkitMask": "radial-gradient(ellipse 60% 60% at center, black 0%, transparent 70%)" }}>
         <template data-dgst="NEXT_DYNAMIC_NO_SSR_CODE" />
       </div>
-      <div className="absolute top-[80px] left-0 w-full h-[500px] pointer-events-none z-0" data-reveal>
-        <div className="absolute inset-0" style={{ "mask": "linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)", "maskComposite": "intersect", "WebkitMaskComposite": "source-in" }}>
-          <canvas style={{ "position": "absolute", "top": "0", "left": "0", "width": "100%", "height": "100%", "background": "transparent" }} />
-        </div>
-        <div className="absolute bottom-[-100px] left-[10%] w-[500px] h-[500px] opacity-30" style={{ "background": "radial-gradient(circle, #1A3870 0%, transparent 70%)", "filter": "blur(80px)" }} />
-        <div className="absolute bottom-[-50px] left-[50%] -translate-x-1/2 w-[700px] h-[400px] opacity-40" style={{ "background": "radial-gradient(ellipse at center, #2D5F9E 0%, #1A3870 40%, transparent 70%)", "filter": "blur(100px)" }} />
-        <div className="absolute bottom-[-80px] right-[10%] w-[400px] h-[400px] opacity-20" style={{ "background": "radial-gradient(circle, #4A8AC4 0%, #2D5F9E 30%, transparent 70%)", "filter": "blur(60px)" }} />
+      <div className="absolute top-[80px] left-0 w-full h-[500px] pointer-events-none z-0" aria-hidden="true">
+        <img
+          src="/harness/images/products-glow.webp"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
       </div>
       <section id="products" className="relative z-10 ds-container flex flex-col items-center text-center scroll-mt-[100px] pt-ds-11 pb-ds-13" data-reveal style={{ "minHeight": "min(60vh, 720px)" }}>
         <h2 className="harness-heading ds-text-heading1 text-ds-primary">

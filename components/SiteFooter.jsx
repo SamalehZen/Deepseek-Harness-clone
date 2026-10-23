@@ -27,6 +27,19 @@ export default function SiteFooter() {
               </div>
             </div>
           </div>
+          <a
+            className="flex items-center gap-ds-2 text-ds-secondary hover:text-ds-primary transition-colors"
+            href="https://x.com/DeepSeekHarness"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="w-5 h-5 flex items-center justify-center" aria-label="X/Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.205 2.25h3.308l-7.227 8.26l8.502 11.24H16.13l-5.214-6.817L4.95 21.75H1.64l7.73-8.835L1.215 2.25H8.04l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z" />
+              </svg>
+            </span>
+            <span className="ds-text-caption whitespace-nowrap">{"X (Twitter)"}</span>
+          </a>
         </div>
         <p className="ds-text-caption text-ds-description text-center">
           {"Open source · MIT"}

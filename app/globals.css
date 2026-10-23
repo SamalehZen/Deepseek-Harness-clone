@@ -43,8 +43,58 @@
  * is a CSS approximation sampled from a rendering of that canvas.
  * ------------------------------------------------------------------------- */
 .hero-aurora {
-  background:
-    radial-gradient(80% 55% at 28% 6%, rgba(122, 140, 160, 0.5) 0%, rgba(72, 100, 138, 0.35) 38%, rgba(30, 50, 80, 0) 72%),
-    radial-gradient(95% 70% at 62% -4%, rgba(73, 99, 138, 0.95) 0%, rgba(41, 77, 123, 0.8) 32%, rgba(23, 45, 74, 0.5) 62%, rgba(5, 7, 10, 0) 100%),
-    linear-gradient(180deg, #2b4a70 0%, #16273e 40%, #0a0f16 72%, #05070a 100%);
+  background-color: #05070a;
+  background-image: url("/harness/images/hero-canvas.webp");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* Scroll-driven reveal for the cards that the live site animates from JS.
+   CSS animations outrank the inline final states baked into the captured DOM. */
+@supports (animation-timeline: view()) {
+  [class*="_entrance__"] {
+    animation: ds-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+  }
+
+  @keyframes ds-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* The scheduled-task preview is a keyframe story driven by the site's JS.
+   Freeze it on its final frame so the static page shows the same result. */
+.HarnessWorkflowPreview_story__lcRCk,
+.HarnessWorkflowPreview_process__plBvM,
+.HarnessWorkflowPreview_disclosure__33P7k,
+.HarnessWorkflowPreview_finishedLabel__s__3R,
+.HarnessWorkflowPreview_settledSummary__peB18,
+.HarnessWorkflowPreview_result__K6zbj,
+.HarnessWorkflowPreview_completion__MaAG1 {
+  animation: none !important;
+}
+
+.HarnessWorkflowPreview_finishedLabel__s__3R,
+.HarnessWorkflowPreview_settledSummary__peB18,
+.HarnessWorkflowPreview_result__K6zbj,
+.HarnessWorkflowPreview_completion__MaAG1 {
+  opacity: 1 !important;
+}
+
+.HarnessWorkflowPreview_disclosure__33P7k {
+  grid-template-rows: 1fr !important;
+}
+
+.HarnessWorkflowPreview_workingLabel__HfIiD,
+.HarnessWorkflowPreview_pendingSummary__YYMCa {
+  display: none !important;
 }

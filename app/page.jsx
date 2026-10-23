@@ -6,6 +6,7 @@ import DeveloperExperience from "@/components/DeveloperExperience";
 import Ecosystem from "@/components/Ecosystem";
 import SiteFooter from "@/components/SiteFooter";
 import Reveal from "@/components/Reveal";
+import Interactions from "@/components/Interactions";
 
 export default function Page() {
   return (
@@ -13,6 +14,7 @@ export default function Page() {
       <SiteHeader />
       <MobileMenu />
       <Reveal />
+      <Interactions />
       <main className="relative flex flex-col w-full">
         <Hero />
         <Capabilities />

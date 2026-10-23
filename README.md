@@ -57,11 +57,21 @@ npm run build
 | Area | Status |
 | --- | --- |
 | Cookie banner | Not cloned on purpose |
-| Hero backdrop | Live page paints a WebGL canvas; approximated with a CSS radial gradient sampled from it |
+| Hero backdrop | Captured still of the original WebGL canvas (animated aurora is frozen) |
+| Products glow | Captured still of the original canvas layer (particle animation is frozen) |
 | Scroll-morphing header pill | Not implemented (appears on scroll on the live site) |
-| "Adapt to your workflow" card media | Rendered by client JS upstream; the static clone shows the empty frame |
-| Footer "X (Twitter)" link | Client-rendered upstream; absent here |
+| "Adapt to your workflow" card | Shows the message + "Worked" state; the completion card is deeper in the keyframe story |
 | Preview conversation | Present, static; the live page types it out |
+| Language switcher, theme toggle | Buttons present, behaviour not wired (the live site is dark-only and client-routed) |
+
+Measured pixel difference against a live capture at 1440 px (cookie banner excluded):
+**5.7 %**, almost entirely the animated canvas layers and the card story above.
+
+## Interactions
+
+`components/Interactions.jsx` ports the behaviour the static export lacks: mobile
+menu, mobile download accordion, desktop download menu (macOS / Windows / all
+downloads) and the copy buttons.
 
 ## Stack
 
